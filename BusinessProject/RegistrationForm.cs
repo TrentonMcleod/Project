@@ -27,5 +27,11 @@ namespace BusinessProject
             Student student = new Student(1, "Jane", "Doe", 3.75, "janedoe@yahoo.com");
             student.display();
         }
+
+        private void btnInstructor_Click(object sender, EventArgs e)
+        {
+            Instructor instructor = new Instructor(1, "John", "Doe", "1234", "Johndoe@yahoo.com");
+            instructor.display();
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnStudent = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInstructor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStudent
@@ -42,21 +42,22 @@
             this.btnStudent.UseVisualStyleBackColor = true;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
-            // button1
+            // btnInstructor
             // 
-            this.button1.Location = new System.Drawing.Point(101, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInstructor.Location = new System.Drawing.Point(101, 88);
+            this.btnInstructor.Name = "btnInstructor";
+            this.btnInstructor.Size = new System.Drawing.Size(75, 23);
+            this.btnInstructor.TabIndex = 1;
+            this.btnInstructor.Text = "Instructor";
+            this.btnInstructor.UseVisualStyleBackColor = true;
+            this.btnInstructor.Click += new System.EventHandler(this.btnInstructor_Click);
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnInstructor);
             this.Controls.Add(this.btnStudent);
             this.Name = "RegistrationForm";
             this.Text = "Registration Form";
@@ -68,7 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnStudent;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInstructor;
     }
 }
 
