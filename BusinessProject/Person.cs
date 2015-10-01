@@ -10,6 +10,8 @@ namespace BusinessProject
     {
         //Fields or properties
         private string _firstName;
+        //Containment
+        private Address address;
         private string _lastName;
         private string _email;
 
