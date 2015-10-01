@@ -33,5 +33,11 @@ namespace BusinessProject
             Instructor instructor = new Instructor(1, "John", "Doe", "1234", "Johndoe@yahoo.com");
             instructor.display();
         }
+
+        private void btnSection_Click(object sender, EventArgs e)
+        {
+            Section section = new Section("123", "404", "1400", "407", 4);
+            section.display();
+        }
     }
 }

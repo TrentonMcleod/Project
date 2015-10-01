@@ -30,7 +30,7 @@
         {
             this.btnStudent = new System.Windows.Forms.Button();
             this.btnInstructor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSection = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStudent
@@ -53,21 +53,22 @@
             this.btnInstructor.UseVisualStyleBackColor = true;
             this.btnInstructor.Click += new System.EventHandler(this.btnInstructor_Click);
             // 
-            // button1
+            // btnSection
             // 
-            this.button1.Location = new System.Drawing.Point(73, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSection.Location = new System.Drawing.Point(73, 98);
+            this.btnSection.Name = "btnSection";
+            this.btnSection.Size = new System.Drawing.Size(75, 23);
+            this.btnSection.TabIndex = 2;
+            this.btnSection.Text = "Section";
+            this.btnSection.UseVisualStyleBackColor = true;
+            this.btnSection.Click += new System.EventHandler(this.btnSection_Click);
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSection);
             this.Controls.Add(this.btnInstructor);
             this.Controls.Add(this.btnStudent);
             this.Name = "RegistrationForm";
@@ -81,7 +82,7 @@
 
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnInstructor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSection;
     }
 }
 
