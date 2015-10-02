@@ -17,7 +17,6 @@ namespace BusinessProject
          {
              s1.display();
          }
-
         }
         public void addsection(Section s)
         {
