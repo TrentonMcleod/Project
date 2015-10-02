@@ -31,6 +31,7 @@
             this.btnStudent = new System.Windows.Forms.Button();
             this.btnInstructor = new System.Windows.Forms.Button();
             this.btnSection = new System.Windows.Forms.Button();
+            this.btnSchedule = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStudent
@@ -63,11 +64,22 @@
             this.btnSection.UseVisualStyleBackColor = true;
             this.btnSection.Click += new System.EventHandler(this.btnSection_Click);
             // 
+            // btnSchedule
+            // 
+            this.btnSchedule.Location = new System.Drawing.Point(73, 136);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Size = new System.Drawing.Size(75, 23);
+            this.btnSchedule.TabIndex = 3;
+            this.btnSchedule.Text = "Schedule";
+            this.btnSchedule.UseVisualStyleBackColor = true;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnSchedule);
             this.Controls.Add(this.btnSection);
             this.Controls.Add(this.btnInstructor);
             this.Controls.Add(this.btnStudent);
@@ -83,6 +95,7 @@
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnInstructor;
         private System.Windows.Forms.Button btnSection;
+        private System.Windows.Forms.Button btnSchedule;
     }
 }
 

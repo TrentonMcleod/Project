@@ -13,7 +13,7 @@ namespace BusinessProject
         private string _office;
 
         //Constructor
-        public Instructor(int id, string firstName, string lastName, string office, string email) : base(firstName, lastName, email)
+        public Instructor(int id, string firstName, string lastName, Address address, string office, string email) : base(firstName, lastName, address, email)
         {
             _id = id;
             _office = office;

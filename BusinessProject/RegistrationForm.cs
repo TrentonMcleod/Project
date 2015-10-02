@@ -24,20 +24,28 @@ namespace BusinessProject
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            Student student = new Student(1, "Jane", "Doe", 3.75, "janedoe@yahoo.com");
-            student.display();
+            //Student student = new Student(1, "Jane", "Doe", 3.75, "janedoe@yahoo.com");
+            //student.display();
         }
 
         private void btnInstructor_Click(object sender, EventArgs e)
         {
-            Instructor instructor = new Instructor(1, "John", "Doe", "1234", "Johndoe@yahoo.com");
-            instructor.display();
+        //    Instructor instructor = new Instructor(1, "John", "Doe", new Address("1003","ll","df",30042)
+          //  instructor.display();
         }
 
         private void btnSection_Click(object sender, EventArgs e)
         {
             Section section = new Section("123", "404", "1400", "407", 4);
             section.display();
+        }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            Schedule schedule = new Schedule();
+            schedule.addsection(new Section("123", "404", "1400", "407", 4));
+            schedule.addsection(new Section("125", "404", "1400", "407", 4));
+            schedule.display();
         }
     }
 }

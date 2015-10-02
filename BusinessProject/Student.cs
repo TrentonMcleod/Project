@@ -8,10 +8,11 @@ namespace BusinessProject
 {
     class Student : Person
     {
+        //Field
         private int _id;
         private double _GPA;
         //Constructor
-        public Student(int id, string firstName, string lastName, double gpa, string email) : base(firstName, lastName, email)
+        public Student(int id, string firstName, string lastName,Address address, double gpa, string email) : base(firstName, lastName, address , email)
         {
             _GPA = gpa;
             _id = id;

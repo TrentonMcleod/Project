@@ -10,16 +10,18 @@ namespace BusinessProject
     {
         //Fields or properties
         private string _firstName;
-        //Containment
-        private Address address;
+        //Containment Address
+        private Address _address;
         private string _lastName;
+       // Schedule schedule = new Schedule();
         private string _email;
 
         //Constructor
-        public Person(string firstName, string lastName, string email)
+        public Person(string firstName, string lastName, Address address, string email)
         {
             _firstName = firstName;
             _lastName = lastName;
+            _address = address;
             _email = email;
         }
         //Make First Name property
