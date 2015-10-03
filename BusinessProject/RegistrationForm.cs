@@ -24,8 +24,8 @@ namespace BusinessProject
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            //Student student = new Student(1, "Jane", "Doe", 3.75, "janedoe@yahoo.com");
-            //student.display();
+            Student student = new Student(1, "Jane", "Doe", new Address("1007", "l6", "JD1", 30045), 3.75, "janedoe@yahoo.com");
+            student.display();
         }
 
         private void btnInstructor_Click(object sender, EventArgs e)

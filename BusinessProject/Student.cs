@@ -16,7 +16,6 @@ namespace BusinessProject
         {
             _GPA = gpa;
             _id = id;
-
         }
         //Make First Name property
         public int ID
