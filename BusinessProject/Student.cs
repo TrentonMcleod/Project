@@ -11,6 +11,7 @@ namespace BusinessProject
         //Field
         private int _id;
         private double _GPA;
+       
         //Constructor
         public Student(int id, string firstName, string lastName,Address address, double gpa, string email) : base(firstName, lastName, address , email)
         {
@@ -33,7 +34,7 @@ namespace BusinessProject
         {
             Console.WriteLine("ID         =" + _id);
             base.display();
-            Console.WriteLine("GPA        =" + _GPA);
+            Console.WriteLine("GPA        =" + _GPA);            
         }
     }
 }
