@@ -12,6 +12,71 @@ namespace BusinessProject
 {
     public partial class RegistrationForm : Form
     {
+        public System.Data.OleDb.OleDbDataAdapter OleDbDataAdapter2;
+        public System.Data.OleDb.OleDbCommand OleDbSelectCommand2;
+        public System.Data.OleDb.OleDbCommand OleDbInsertCommand2;
+        public System.Data.OleDb.OleDbCommand OleDbUpdateCommand2;
+        public System.Data.OleDb.OleDbCommand OleDbDeleteCommand2;
+        public System.Data.OleDb.OleDbConnection OleDbConnection2;
+        public string cmd;
+        private int _id;
+
+        public void DBSetup()
+        {
+
+            // +++++++++++++++++++++++++++  DBSetup function +++++++++++++++++++++++++++
+            // This DBSetup() method instantiates all the DB objects needed to access a DB, 
+            // including OleDbDataAdapter, which contains 4 other objects(OlsDbSelectCommand, 
+            // oleDbInsertCommand, oleDbUpdateCommand, oleDbDeleteCommand.) And each
+            // Command object contains a Connection object and an SQL string object.
+            OleDbDataAdapter2 = new System.Data.OleDb.OleDbDataAdapter();
+            OleDbSelectCommand2 = new System.Data.OleDb.OleDbCommand();
+            OleDbInsertCommand2 = new System.Data.OleDb.OleDbCommand();
+            OleDbUpdateCommand2 = new System.Data.OleDb.OleDbCommand();
+            OleDbDeleteCommand2 = new System.Data.OleDb.OleDbCommand();
+            OleDbConnection2 = new System.Data.OleDb.OleDbConnection();
+
+
+            OleDbDataAdapter2.DeleteCommand = OleDbDeleteCommand2;
+            OleDbDataAdapter2.InsertCommand = OleDbInsertCommand2;
+            OleDbDataAdapter2.SelectCommand = OleDbSelectCommand2;
+            OleDbDataAdapter2.UpdateCommand = OleDbUpdateCommand2;
+
+           
+
+        }  //end
+
+        public void SelectDB(int id)
+        { //++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
+            DBSetup();
+            cmd = "Select * from Instructors where ID = " + id;
+            OleDbDataAdapter2.SelectCommand.CommandText = cmd;
+            OleDbDataAdapter2.SelectCommand.Connection = OleDbConnection2;
+            Console.WriteLine(cmd);
+            try
+            {
+                OleDbConnection2.Open();
+                System.Data.OleDb.OleDbDataReader dr;
+                dr = OleDbDataAdapter2.SelectCommand.ExecuteReader();
+
+                dr.Read();
+                _id = id;
+               /*setFname(dr.GetValue(1) + "");
+                setLname(dr.GetValue(2) + "");
+                setAddr(dr.GetValue(3) + "");
+                setRoomNo(Int32.Parse(dr.GetValue(4) + ""));*/
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                OleDbConnection2.Close();
+            }
+        } //end SelectDB()
+
+
         public RegistrationForm()
         {
             InitializeComponent();

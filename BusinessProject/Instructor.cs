@@ -11,6 +11,11 @@ namespace BusinessProject
         //Feild
         private int _id;
         private string _office;
+        
+        private void SelectDB(int id)
+        {
+            _id = id;
+        }
 
         //Constructor
         public Instructor(int id, string firstName, string lastName, Address address, string office, string email) : base(firstName, lastName, address, email)
@@ -18,6 +23,7 @@ namespace BusinessProject
             _id = id;
             _office = office;
         }
+
         //Make ID property
         public int ID
         {
