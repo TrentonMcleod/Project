@@ -30,8 +30,9 @@ namespace BusinessProject
 
         private void btnInstructor_Click(object sender, EventArgs e)
         {
-        //    Instructor instructor = new Instructor(1, "John", "Doe", new Address("1003","ll","df",30042)
-          //  instructor.display();
+            //The object Address was added to the person class
+            Instructor instructor = new Instructor(1, "John", "Doe", new Address("1003", "ll", "df", 30042), "1234", "JD@jd.com");
+            instructor.display();
         }
 
         private void btnSection_Click(object sender, EventArgs e)
