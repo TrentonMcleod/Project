@@ -13,9 +13,7 @@ namespace BusinessProject
         private string _office;
 
         public Instructor() { }
-        
-         
-       
+
             //=============================  BEHAVIORS =========================
             //++++++++++++++++  DATABASE Data Elements +++++++++++++++++
             public System.Data.OleDb.OleDbDataAdapter OleDbDataAdapter2;
@@ -40,7 +38,6 @@ namespace BusinessProject
                 OleDbDeleteCommand2 = new System.Data.OleDb.OleDbCommand();
                 OleDbConnection2 = new System.Data.OleDb.OleDbConnection();
 
-
                 OleDbDataAdapter2.DeleteCommand = OleDbDeleteCommand2;
                 OleDbDataAdapter2.InsertCommand = OleDbInsertCommand2;
                 OleDbDataAdapter2.SelectCommand = OleDbSelectCommand2;
@@ -58,10 +55,8 @@ namespace BusinessProject
 
             }  //end DBSetup()
 
-
             public void SelectDB(int id)
             { //++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
-
 
                 DBSetup();
                 cmd = "Select * from INSTRUCTORS where ID = " + id;
@@ -76,12 +71,12 @@ namespace BusinessProject
 
                     dr.Read();
                     _id = id;
-                  FirsName=dr.GetValue(1) + "";
-                    //setLname(dr.GetValue(2) + "");
-                    //setAddr(dr.GetValue(3) + "");
-                    //setRoomNo(Int32.Parse(dr.GetValue(4) + ""));
-                }
-                catch (Exception ex)
+                    FirstName=dr.GetValue(1) + "";
+                    LastName=dr.GetValue(2) + "";
+                    email =dr.GetValue(9) + "";
+                //setRoomNo(Int32.Parse(dr.GetValue(4) + ""));
+            }
+            catch (Exception ex)
                 {
                     Console.WriteLine(ex);
                 }

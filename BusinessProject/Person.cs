@@ -27,7 +27,7 @@ namespace BusinessProject
             _email = email;
         }
         //Make First Name property
-        public string FirsName
+        public string FirstName
         {
             get { return _firstName; }
             set { _firstName = value; }
