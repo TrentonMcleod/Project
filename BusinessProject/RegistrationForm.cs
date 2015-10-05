@@ -25,20 +25,18 @@ namespace BusinessProject
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            Student student;
-            student = new Student();
-            student.SelectDB(2);
-            student.display();
+            Student stud;
+            stud = new Student();
+            stud.SelectDB(2);
+            stud.display();
         }
 
         private void btnInstructor_Click(object sender, EventArgs e)
-        {
-             
+        {            
             Instructor i1;
             i1 = new Instructor();
             i1.SelectDB(2);
             i1.display();
-
         }
 
         private void btnSection_Click(object sender, EventArgs e)

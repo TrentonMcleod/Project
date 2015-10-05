@@ -57,7 +57,7 @@ namespace BusinessProject
             { //++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
 
                 DBSetup();
-                cmd = "Select * from Student where ID = " + id;
+                cmd = "Select * from STUDENTS where ID = " + id;
                 OleDbDataAdapter2.SelectCommand.CommandText = cmd;
                 OleDbDataAdapter2.SelectCommand.Connection = OleDbConnection2;
                 Console.WriteLine(cmd);
