@@ -73,7 +73,9 @@ namespace BusinessProject
                     _id = id;
                     FirstName=dr.GetValue(1) + "";
                     LastName=dr.GetValue(2) + "";
-                    email =dr.GetValue(9) + "";
+               
+                   
+
                 //setRoomNo(Int32.Parse(dr.GetValue(4) + ""));
             }
             catch (Exception ex)

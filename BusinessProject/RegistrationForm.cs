@@ -25,7 +25,9 @@ namespace BusinessProject
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            Student student = new Student(1, "Jane", "Doe", new Address("1007", "l6", "JD1", 30045), 3.75, "janedoe@yahoo.com");
+            Student student;
+            student = new Student();
+            student.SelectDB(2);
             student.display();
         }
 
