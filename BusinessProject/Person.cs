@@ -16,6 +16,8 @@ namespace BusinessProject
        // Schedule schedule = new Schedule();
         private string _email;
 
+        public Person() { }
+
         //Constructor
         public Person(string firstName, string lastName, Address address, string email)
         {
