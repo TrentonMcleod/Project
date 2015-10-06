@@ -94,14 +94,14 @@ namespace BusinessProject
             _office = office;
         }
 
-        //Make ID property
+        //Make ID property//
         public int ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        //Make Office Name property
+        //Make Office Name propertyd
         public string Office
         {
             get { return _office; }
