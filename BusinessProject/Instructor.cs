@@ -56,7 +56,7 @@ namespace BusinessProject
             }  //end DBSetup()
 
             public void SelectDB(int id)
-            { //++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
+            { ///++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
 
                 DBSetup();
                 cmd = "Select * from INSTRUCTORS where ID = " + id;
