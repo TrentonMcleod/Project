@@ -73,10 +73,19 @@ namespace BusinessProject
                     _id = id;
                     FirstName=dr.GetValue(1) + "";
                     LastName=dr.GetValue(2) + "";
-               
-                   
+                    
+                    _address.Street = dr.GetValue(3) + "";
+                    _address.City = dr.GetValue(4) + "";
+                    _address.State = dr.GetValue(5) + "";
 
-                //setRoomNo(Int32.Parse(dr.GetValue(4) + ""));
+                    _address.Zip = Int32.Parse(dr.GetValue(4) + "");
+                    email = dr.GetValue(7) + "";
+                    Office = dr.GetValue(8) + "";
+
+
+
+
+                ///setRoomNo(Int32.Parse(dr.GetValue(4) + ""));
             }
             catch (Exception ex)
                 {
