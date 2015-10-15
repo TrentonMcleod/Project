@@ -53,10 +53,10 @@ namespace BusinessProject
                 "OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repai" +
                 "r=False;User ID=Admin;Jet OLEDB:Global Bulk Transactions=1";
 
-            }  ////end DBSetup()
+            }  //end DBSetup()
 
             public void SelectDB(int id)
-            { ///++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
+            { //++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
 
                 DBSetup();
                 cmd = "Select * from INSTRUCTORS where ID = " + id;
@@ -82,10 +82,6 @@ namespace BusinessProject
                     email = dr.GetValue(7) + "";
                     Office = dr.GetValue(8) + "";
 
-
-
-
-                ///setRoomNo(Int32.Parse(dr.GetValue(4) + ""));
             }
             catch (Exception ex)
                 {
@@ -96,8 +92,47 @@ namespace BusinessProject
                     OleDbConnection2.Close();
                 }
             } //end SelectDB()
-              //Constructor
-            public Instructor(int id, string firstName, string lastName, Address address, string office, string email) : base(firstName, lastName, address, email)
+
+        public void InsertDB(int id, string firstName, string lastName, Address address, string office, string email)
+        { //++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
+
+            DBSetup();
+            cmd = "Insert into Instructors values("+id+",'"+firstName+ "','" + lastName + "','" + address.Street + "'," + office + "," + email +"');
+            OleDbDataAdapter2.SelectCommand.CommandText = cmd;
+            OleDbDataAdapter2.SelectCommand.Connection = OleDbConnection2;
+            Console.WriteLine(cmd);
+            try
+            {
+                OleDbConnection2.Open();
+                System.Data.OleDb.OleDbDataReader dr;
+                dr = OleDbDataAdapter2.SelectCommand.ExecuteReader();
+
+                dr.Read();
+                _id = id;
+                FirstName = dr.GetValue(1) + "";
+                LastName = dr.GetValue(2) + "";
+
+                _address.Street = dr.GetValue(3) + "";
+                _address.City = dr.GetValue(4) + "";
+                _address.State = dr.GetValue(5) + "";
+
+                _address.Zip = Int32.Parse(dr.GetValue(4) + "");
+                email = dr.GetValue(7) + "";
+                Office = dr.GetValue(8) + "";
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                OleDbConnection2.Close();
+            }
+        } //end UpdateDB()
+
+          //Constructor
+        public Instructor(int id, string firstName, string lastName, Address address, string office, string email) : base(firstName, lastName, address, email)
         {
             _id = id;
             _office = office;

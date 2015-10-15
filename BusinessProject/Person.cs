@@ -11,7 +11,7 @@ namespace BusinessProject
         //Fields or properties
         private string _firstName;
         //Containment Address
-        private Address _address;
+        public Address _address = new Address();
         private string _lastName;
        // Schedule schedule = new Schedule();
         private string _email;
@@ -49,6 +49,7 @@ namespace BusinessProject
         {
             Console.WriteLine("First Name =" + _firstName);
             Console.WriteLine("Last Name  =" + _lastName);
+            _address.display();
             Console.WriteLine("Eamil      =" + _email);
         }
     }
