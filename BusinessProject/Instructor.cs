@@ -53,10 +53,10 @@ namespace BusinessProject
                 "OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repai" +
                 "r=False;User ID=Admin;Jet OLEDB:Global Bulk Transactions=1";
 
-            }  //end DBSetup()
+            }  ////end DBSetup()
 
             public void SelectDB(int id)
-            { //++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
+            { ///++++++++++++++++++++++++++  SELECT +++++++++++++++++++++++++
 
                 DBSetup();
                 cmd = "Select * from INSTRUCTORS where ID = " + id;
